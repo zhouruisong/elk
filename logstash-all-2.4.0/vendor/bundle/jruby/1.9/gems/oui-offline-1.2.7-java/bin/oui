@@ -1,0 +1,61 @@
+#!/usr/bin/env ruby
+root = File.dirname(File.expand_path('..', __FILE__))
+lib_dir = File.join(root, 'lib')
+$:.unshift lib_dir unless $:.include? lib_dir
+require 'oui'
+autoload :JSON, 'json'
+autoload :YAML, 'yaml'
+
+
+case ARGV.shift
+when 'lookup'
+  def output(r)
+    if @yaml_output
+      YAML.dump r
+    elsif @json_output
+      JSON.dump r
+    elsif @ruby_output
+      r
+    else
+      r[:organization]
+    end
+  end
+
+  success = nil
+  # TODO: OptParse || thor
+  @json_output = ARGV.delete '-j'
+  @ruby_output = ARGV.delete '-r'
+  @yaml_output = ARGV.delete '-y'
+  formats = [@ruby_output, @json_output, @yaml_output].count { |x| x };
+  fail 'Only one format flag is allowed' if formats > 1
+  ARGV.map do |mac|
+    r = OUI.find(mac)
+    success &= !!r
+    r ||= {}
+    puts(output(r))
+  end
+  exit 1 unless success
+
+when 'update'
+  if ARGV.delete '-l'
+    OUI.update_db(local = true)
+  else
+    OUI.update_db
+  end
+
+else
+  $stderr.puts <<-EOS
+  Usage: oui lookup [options...] oui+     # get corp name, oui in 24-bit oui in hex format
+  
+             -j JSON verbose output
+             -r Ruby verbose output
+             -y YAML verbose output
+
+         oui update [options...]          # update oui internal db from ieee.org
+
+             -l dont connect to network, instead use data/oui.txt
+
+EOS
+  exit 1
+end 
+

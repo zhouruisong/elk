@@ -1,0 +1,1 @@
+%{WORD} %{WORD} %{DATA:timestamp:DATA}

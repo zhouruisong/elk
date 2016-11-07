@@ -1,0 +1,10 @@
+[2016-11-03 08:00:08,555][INFO ][cluster.metadata         ] [Human Top II] [.marvel-es-1-2016.11.03] creating index, cause [auto(bulk api)], templates [.marvel-es-1], shards [1]/[1], mappings [_default_, shards, node, index_stats, index_recovery, cluster_state, cluster_stats, node_stats, indices_stats]
+[2016-11-03 08:00:08,603][INFO ][cluster.routing.allocation] [Human Top II] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.marvel-es-1-2016.11.03][0]] ...]).
+[2016-11-03 08:00:08,619][INFO ][cluster.metadata         ] [Human Top II] [.marvel-es-1-2016.11.03] update_mapping [index_recovery]
+[2016-11-03 08:00:08,634][INFO ][cluster.metadata         ] [Human Top II] [.marvel-es-1-2016.11.03] update_mapping [index_stats]
+[2016-11-03 08:00:08,644][INFO ][cluster.metadata         ] [Human Top II] [.marvel-es-1-2016.11.03] update_mapping [cluster_state]
+[2016-11-03 08:00:08,651][INFO ][cluster.metadata         ] [Human Top II] [.marvel-es-1-2016.11.03] update_mapping [node]
+[2016-11-03 08:00:08,663][INFO ][cluster.metadata         ] [Human Top II] [.marvel-es-1-2016.11.03] update_mapping [node_stats]
+[2016-11-03 08:00:08,671][INFO ][cluster.metadata         ] [Human Top II] [.marvel-es-1-2016.11.03] update_mapping [indices_stats]
+[2016-11-03 08:00:08,680][INFO ][cluster.metadata         ] [Human Top II] [.marvel-es-1-2016.11.03] update_mapping [shards]
+[2016-11-03 08:00:08,691][INFO ][cluster.metadata         ] [Human Top II] [.marvel-es-1-2016.11.03] update_mapping [cluster_stats]

@@ -1,0 +1,106 @@
+[2016-11-02 15:35:24,410][WARN ][bootstrap                ] Unable to lock JVM Memory: error=12,reason=无法分配内存
+[2016-11-02 15:35:24,411][WARN ][bootstrap                ] This can result in part of the JVM being swapped out.
+[2016-11-02 15:35:24,411][WARN ][bootstrap                ] Increase RLIMIT_MEMLOCK, soft limit: 65536, hard limit: 65536
+[2016-11-02 15:35:24,411][WARN ][bootstrap                ] These can be adjusted by modifying /etc/security/limits.conf, for example: 
+	# allow user 'zhouruisong' mlockall
+	zhouruisong soft memlock unlimited
+	zhouruisong hard memlock unlimited
+[2016-11-02 15:35:24,411][WARN ][bootstrap                ] If you are logged in interactively, you will have to re-login for the new limits to take effect.
+[2016-11-02 15:35:24,519][INFO ][node                     ] [Random] version[2.4.1], pid[25962], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-11-02 15:35:24,519][INFO ][node                     ] [Random] initializing ...
+[2016-11-02 15:35:24,962][INFO ][plugins                  ] [Random] modules [reindex, lang-expression, lang-groovy], plugins [head, license, marvel-agent, kopf], sites [head, kopf]
+[2016-11-02 15:35:24,982][INFO ][env                      ] [Random] using [1] data paths, mounts [[/home (/dev/mapper/centos-home)]], net usable_space [23.7gb], net total_space [45.5gb], spins? [possibly], types [xfs]
+[2016-11-02 15:35:24,982][INFO ][env                      ] [Random] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-11-02 15:35:24,982][WARN ][env                      ] [Random] max file descriptors [4096] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-11-02 15:35:26,135][INFO ][node                     ] [Random] initialized
+[2016-11-02 15:35:26,135][INFO ][node                     ] [Random] starting ...
+[2016-11-02 15:35:26,181][INFO ][transport                ] [Random] publish_address {10.75.144.208:9300}, bound_addresses {10.75.144.208:9300}
+[2016-11-02 15:35:26,185][INFO ][discovery                ] [Random] elasticsearch/grqTSooUSQGxTbU6sDUcnQ
+[2016-11-02 15:35:29,250][INFO ][cluster.service          ] [Random] new_master {Random}{grqTSooUSQGxTbU6sDUcnQ}{10.75.144.208}{10.75.144.208:9300}{max_local_storage_nodes=1}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-11-02 15:35:29,302][INFO ][http                     ] [Random] publish_address {10.75.144.208:9200}, bound_addresses {10.75.144.208:9200}
+[2016-11-02 15:35:29,302][INFO ][node                     ] [Random] started
+[2016-11-02 15:35:29,353][INFO ][gateway                  ] [Random] recovered [0] indices into cluster_state
+[2016-11-02 15:35:29,582][INFO ][license.plugin.core      ] [Random] license [466456bf-8517-473a-a482-9cafe9dc1241] - valid
+[2016-11-02 15:35:29,584][ERROR][license.plugin.core      ] [Random] 
+#
+# License will expire on [Friday, December 02, 2016]. If you have a new license, please update it.
+# Otherwise, please reach out to your support contact.
+# 
+# Commercial plugins operate with reduced functionality on license expiration:
+# - marvel
+#  - The agent will stop collecting cluster and indices metrics
+#  - The agent will stop automatically cleaning indices older than [marvel.history.duration]
+[2016-11-02 15:35:36,235][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] creating index, cause [auto(bulk api)], templates [.marvel-es-1], shards [1]/[1], mappings [_default_, node, shards, index_stats, index_recovery, cluster_state, cluster_stats, node_stats, indices_stats]
+[2016-11-02 15:35:36,348][INFO ][cluster.metadata         ] [Random] [.marvel-es-data-1] creating index, cause [auto(bulk api)], templates [.marvel-es-data-1], shards [1]/[1], mappings [node, cluster_info]
+[2016-11-02 15:35:36,409][INFO ][cluster.routing.allocation] [Random] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.marvel-es-data-1][0], [.marvel-es-1-2016.11.02][0]] ...]).
+[2016-11-02 15:35:36,432][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [cluster_state]
+[2016-11-02 15:35:36,471][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [node]
+[2016-11-02 15:35:36,498][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [node_stats]
+[2016-11-02 15:35:36,522][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [indices_stats]
+[2016-11-02 15:35:36,537][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [cluster_stats]
+[2016-11-02 15:35:46,631][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [index_recovery]
+[2016-11-02 15:35:46,651][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [index_stats]
+[2016-11-02 15:35:46,673][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [indices_stats]
+[2016-11-02 15:35:46,687][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [shards]
+[2016-11-02 15:35:46,701][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [cluster_stats]
+[2016-11-02 15:35:56,769][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] creating index, cause [auto(bulk api)], templates [.marvel-es-1], shards [1]/[1], mappings [_default_, node, shards, index_stats, index_recovery, cluster_state, cluster_stats, node_stats, indices_stats]
+[2016-11-02 15:35:56,808][INFO ][cluster.metadata         ] [Random] [.marvel-es-data-1] creating index, cause [auto(bulk api)], templates [.marvel-es-data-1], shards [1]/[1], mappings [node, cluster_info]
+[2016-11-02 15:35:56,844][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [cluster_state]
+[2016-11-02 15:35:56,854][INFO ][cluster.routing.allocation] [Random] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.marvel-es-data-1][0], [.marvel-es-data-1][0]] ...]).
+[2016-11-02 15:35:56,866][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [node]
+[2016-11-02 15:35:56,883][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [node_stats]
+[2016-11-02 15:35:56,894][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [indices_stats]
+[2016-11-02 15:35:56,929][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [cluster_stats]
+[2016-11-02 15:36:06,984][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [index_recovery]
+[2016-11-02 15:36:07,001][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [index_stats]
+[2016-11-02 15:36:07,021][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [indices_stats]
+[2016-11-02 15:36:07,032][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [shards]
+[2016-11-02 15:36:07,042][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [cluster_stats]
+[2016-11-02 15:37:07,384][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] creating index, cause [auto(bulk api)], templates [.marvel-es-1], shards [1]/[1], mappings [_default_, node, shards, index_stats, index_recovery, cluster_state, cluster_stats, node_stats, indices_stats]
+[2016-11-02 15:37:07,425][INFO ][cluster.routing.allocation] [Random] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.marvel-es-1-2016.11.02][0]] ...]).
+[2016-11-02 15:37:07,433][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [index_recovery]
+[2016-11-02 15:37:07,443][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [index_stats]
+[2016-11-02 15:37:07,452][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [cluster_state]
+[2016-11-02 15:37:07,460][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [node]
+[2016-11-02 15:37:07,470][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [node_stats]
+[2016-11-02 15:37:07,480][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [indices_stats]
+[2016-11-02 15:37:07,488][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [shards]
+[2016-11-02 15:37:07,497][INFO ][cluster.metadata         ] [Random] [.marvel-es-1-2016.11.02] update_mapping [cluster_stats]
+[2016-11-02 15:37:27,604][INFO ][cluster.metadata         ] [Random] [.marvel-es-data-1] creating index, cause [auto(bulk api)], templates [.marvel-es-data-1], shards [1]/[1], mappings [node, cluster_info]
+[2016-11-02 15:37:27,632][INFO ][cluster.routing.allocation] [Random] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.marvel-es-data-1][0]] ...]).
+[2016-11-02 15:38:22,117][WARN ][bootstrap                ] Unable to lock JVM Memory: error=12,reason=无法分配内存
+[2016-11-02 15:38:22,117][WARN ][bootstrap                ] This can result in part of the JVM being swapped out.
+[2016-11-02 15:38:22,117][WARN ][bootstrap                ] Increase RLIMIT_MEMLOCK, soft limit: 65536, hard limit: 65536
+[2016-11-02 15:38:22,118][WARN ][bootstrap                ] These can be adjusted by modifying /etc/security/limits.conf, for example: 
+	# allow user 'zhouruisong' mlockall
+	zhouruisong soft memlock unlimited
+	zhouruisong hard memlock unlimited
+[2016-11-02 15:38:22,118][WARN ][bootstrap                ] If you are logged in interactively, you will have to re-login for the new limits to take effect.
+[2016-11-02 15:38:22,224][INFO ][node                     ] [Human Top II] version[2.4.1], pid[26093], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-11-02 15:38:22,224][INFO ][node                     ] [Human Top II] initializing ...
+[2016-11-02 15:38:22,632][INFO ][plugins                  ] [Human Top II] modules [reindex, lang-expression, lang-groovy], plugins [head, license, marvel-agent, kopf], sites [head, kopf]
+[2016-11-02 15:38:22,650][INFO ][env                      ] [Human Top II] using [1] data paths, mounts [[/home (/dev/mapper/centos-home)]], net usable_space [23.7gb], net total_space [45.5gb], spins? [possibly], types [xfs]
+[2016-11-02 15:38:22,650][INFO ][env                      ] [Human Top II] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-11-02 15:38:22,651][WARN ][env                      ] [Human Top II] max file descriptors [4096] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-11-02 15:38:23,923][INFO ][node                     ] [Human Top II] initialized
+[2016-11-02 15:38:23,923][INFO ][node                     ] [Human Top II] starting ...
+[2016-11-02 15:38:23,967][INFO ][transport                ] [Human Top II] publish_address {10.75.144.208:9300}, bound_addresses {10.75.144.208:9300}
+[2016-11-02 15:38:23,971][INFO ][discovery                ] [Human Top II] elasticsearch/4NA8yrzPRvKsdXsFS1C18g
+[2016-11-02 15:38:27,022][INFO ][cluster.service          ] [Human Top II] new_master {Human Top II}{4NA8yrzPRvKsdXsFS1C18g}{10.75.144.208}{10.75.144.208:9300}{max_local_storage_nodes=1}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-11-02 15:38:27,040][INFO ][http                     ] [Human Top II] publish_address {10.75.144.208:9200}, bound_addresses {10.75.144.208:9200}
+[2016-11-02 15:38:27,041][INFO ][node                     ] [Human Top II] started
+[2016-11-02 15:38:27,106][INFO ][license.plugin.core      ] [Human Top II] license [466456bf-8517-473a-a482-9cafe9dc1241] - valid
+[2016-11-02 15:38:27,109][ERROR][license.plugin.core      ] [Human Top II] 
+#
+# License will expire on [Friday, December 02, 2016]. If you have a new license, please update it.
+# Otherwise, please reach out to your support contact.
+# 
+# Commercial plugins operate with reduced functionality on license expiration:
+# - marvel
+#  - The agent will stop collecting cluster and indices metrics
+#  - The agent will stop automatically cleaning indices older than [marvel.history.duration]
+[2016-11-02 15:38:27,126][INFO ][gateway                  ] [Human Top II] recovered [2] indices into cluster_state
+[2016-11-02 15:38:27,896][INFO ][cluster.routing.allocation] [Human Top II] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.marvel-es-1-2016.11.02][0]] ...]).
+[2016-11-02 15:41:14,535][INFO ][cluster.metadata         ] [Human Top II] [logstash--02.11.2016] creating index, cause [auto(bulk api)], templates [logstash], shards [5]/[1], mappings [_default_]
+[2016-11-02 15:41:14,618][INFO ][cluster.metadata         ] [Human Top II] [logstash--02.11.2016] create_mapping [logs]
+[2016-11-02 15:41:14,642][INFO ][cluster.routing.allocation] [Human Top II] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[logstash--02.11.2016][0], [logstash--02.11.2016][0]] ...]).
